@@ -14,6 +14,7 @@ import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
   const {data} = useData()
+  // Ici on copie le tableau avec slice sans le modifier et le trie par date décroissante et on récupère l'élément 0
   const last = data?.events.slice().sort((a,b)=> new Date(b.date)- new Date(a.date))[0];
   return <>
     <header>
