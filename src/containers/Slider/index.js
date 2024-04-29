@@ -8,8 +8,7 @@ const Slider = () => {
   const { data } = useData();
   const [index, setIndex] = useState(0);
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
-  // invertion de 1 et -1 pour afficher les slides du plus récent au plus ancien
-    new Date(evtA.date) < new Date(evtB.date) ? 1 : -1
+    new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
   );
   const nextCard = () => {
     // ajout d'un if pour vérifier la présence de "byDateDesc"
